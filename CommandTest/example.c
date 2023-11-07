@@ -45,10 +45,11 @@ void cal(const char *argv,int begin,int len,long *sum)
             {
                 cal(argv[i],0,len,&sum);
             }
-            else if (len >= 3 && argv[i][1] == 'x')
+            else if (len >= 3 && argv[i][0]== '0' && argv[i][1] == 'x')
             {
                 cal(argv[i],2,len,&sum);
-            }
+            }else{
+                break;
         }
         if (sum >= 0)
         {
